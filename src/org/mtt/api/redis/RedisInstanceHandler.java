@@ -3,7 +3,9 @@ import redis.clients.jedis.Jedis;
 import java.util.List;
 import java.util.Set;
 
-public class RedisInstanceHandler {
+import org.mtt.webapi.core.IMemCache;
+
+public class RedisInstanceHandler implements IMemCache, IRedis{
     
     public RedisInstanceHandler() {
         super();
