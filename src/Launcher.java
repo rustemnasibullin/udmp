@@ -12,10 +12,10 @@ import java.util.logging.Logger;
 
 import org.apache.commons.io.IOUtils;
 
-import ru.mtt.rservice.core.SystemLogger;
-import ru.mtt.webapi.core.IConfigurableObject;
-import ru.mtt.webapi.core.XConfigurableObject;
-import ru.mtt.webapi.utils.XUtils;
+import org.mtt.rservice.core.SystemLogger;
+import org.mtt.webapi.core.IConfigurableObject;
+import org.mtt.webapi.core.XConfigurableObject;
+import org.mtt.webapi.utils.XUtils;
 
 /**
  * User: Nasibullin Rustem
@@ -95,7 +95,8 @@ public class Launcher
         List<URL> urls = new ArrayList<URL>();
         urls.add(new URL("file:lib/"));
         urls.add(new URL("file:lib/logging/" + args[0] + "/"));
-        if (!SHUTDOWN_COMMAND.equals(args[0])) XConfigurableObject._POSTFIX = args[0];
+        if (!SHUTDOWN_COMMAND.equals(args[0]))
+            XConfigurableObject._POSTFIX = args[0];
 
         logger.info("Loading libraries\n");
 
@@ -155,8 +156,8 @@ public class Launcher
         
         
         public void info (Object data) {
-            
-               XUtils.plog ("_launcher.log", "> "+data);
+
+            XUtils.plog ("_launcher.log", "> "+data);
             
         }
         

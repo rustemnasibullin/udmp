@@ -8,7 +8,7 @@
        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
     
-    <bean id="rcacheManagerFactory" class="ru.mtt.webapi.memcache.CacheManagerFactory">
+    <bean id="rcacheManagerFactory" class="org.mtt.webapi.memcache.CacheManagerFactory">
         <property name="defFileConfig">
             <value>cfg/ehcache.xml</value>
         </property>
@@ -26,13 +26,13 @@
         </property>
     </bean>
 
-    <bean id="SystemCache" class="ru.mtt.webapi.memcache.SystemCache" scope="singleton">
+    <bean id="SystemCache" class="org.mtt.webapi.memcache.SystemCache" scope="singleton">
         <property name="xCache" ref="XCache"/>
     </bean>
 
 
 
-    <bean id="SNMPProcessor" class="ru.mtt.rservice.core.SNMPProcessor"/>
+    <bean id="SNMPProcessor" class="org.mtt.rservice.core.SNMPProcessor"/>
 
 
 

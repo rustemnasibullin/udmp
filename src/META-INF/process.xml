@@ -12,7 +12,7 @@
     <bean id = "roundRobinRefSynch" class="org.apache.camel.processor.loadbalancer.RoundRobinLoadBalancer">
     </bean>
 
-    <bean id = "logger" class="ru.mtt.webapi.camel.XBUSLogger">
+    <bean id = "logger" class="org.mtt.webapi.camel.XBUSLogger">
     </bean>
 
 </beans>

@@ -14,10 +14,10 @@
     <util:properties id="properties2" location="classpath:cfg/rservice.properties"/>
 
 
-    <bean id="camel" class="ru.mtt.webapi.camel.CamelStart" init-method="activate" destroy-method="deactivate" scope="singleton">
+    <bean id="camel" class="org.mtt.webapi.camel.CamelStart" init-method="activate" destroy-method="deactivate" scope="singleton">
     </bean>
 
-    <bean id="RServiceController" class="ru.mtt.rservice.mina.RServiceController"  init-method="start" destroy-method="stop">
+    <bean id="RServiceController" class="org.mtt.rservice.mina.RServiceController"  init-method="start" destroy-method="stop">
         <!-- property name="cache" ref="SystemCache" /> -->
         <property name="config" value="cfg/rservice.properties"/>
     </bean>
@@ -41,18 +41,18 @@
         </property>
     </bean>
 
-    <bean id="SystemCache" class="ru.mtt.webapi.memcache.SystemCache" scope="singleton">
+    <bean id="SystemCache" class="org.mtt.webapi.memcache.SystemCache" scope="singleton">
         <property name="xCache" ref="XCache"/>
     </bean>
  
  
  -->
  
-    <bean id="MonitorCommand" class="ru.mtt.rservice.commands.MonitorCommand" >
+    <bean id="MonitorCommand" class="org.mtt.rservice.commands.MonitorCommand" >
           <property name="owner" ref="RServiceController" />
     </bean>
 
-    <bean name="httpMinaServer" class="ru.mtt.webapi.mina.HTTPMinaServer" init-method="start" destroy-method="stop">
+    <bean name="httpMinaServer" class="org.mtt.webapi.mina.HTTPMinaServer" init-method="start" destroy-method="stop">
           <property name="requestHandler" ref="RServiceController" />
           <property name="serverPort" value="#{properties2.port}"/>
           <property name="config" value="cfg/rservice.properties"/>

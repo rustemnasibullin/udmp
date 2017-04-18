@@ -11,13 +11,13 @@
   <import resource="classpath:META-INF/webapibeans.xml"/>
 
 
-  <bean id="camelContextControllerMng" class="ru.mtt.webapi.camel.CamelStartUpListener" >
+  <bean id="camelContextControllerMng" class="org.mtt.webapi.camel.CamelStartUpListener" >
         <property name="config" value="cfg/webapimng.properties"/>
         <property name="camelContext" ref="webapimng" />
   </bean>
 
 <!--
-  <bean id="camelContextLifecycleStrategy" class="ru.mtt.webapi.camel.CamelLifecycleStrategy" >
+  <bean id="camelContextLifecycleStrategy" class="org.mtt.webapi.camel.CamelLifecycleStrategy" >
         <property name="config" value="cfg/webapimng.properties"/>
         <property name="camelContext" ref="webapimng" />
   </bean>
