@@ -1,6 +1,6 @@
 package org.mtt.api.kafka;
 
-public class KafkaInstanceHandler {
+public class KafkaInstanceHandler implements IKafka {
     public KafkaInstanceHandler() {
         super();
     }
